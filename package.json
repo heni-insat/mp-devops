@@ -1,0 +1,18 @@
+
+{
+  "name": "string-manipulation-api",
+  "version": "1.0.0",
+  "description": "API for string manipulation with reverse, uppercase, and vowel count functions",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "mocha tests/unit/*.js && mocha tests/integration/*.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.2"
+  }
+}
