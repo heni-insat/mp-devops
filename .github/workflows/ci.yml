@@ -40,7 +40,7 @@ jobs:
             -Dsonar.projectKey=heni-insat_tp2-devops \
             -Dsonar.organization=heni-insat \
             -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=$SONAR_TOKEN
+            -Dsonar.login=$SONAR_TOKEN \
             -Dsonar.qualitygate.wait=true
 
       - name: Set up Docker Buildx
