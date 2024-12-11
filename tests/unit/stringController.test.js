@@ -3,6 +3,7 @@ const {
   reverse,
   uppercase,
   countVowels,
+  lowercase,
 } = require("../../src/controllers/stringController");
 
 describe("String Manipulation Controller Unit Tests", () => {
