@@ -35,7 +35,7 @@ spec:
   source:
     repoURL: "${var.git_repo_url}"
     targetRevision: "${var.git_repo_branch}"
-    path: "manifests"
+    path: "infra/manifests"
   destination:
     server: https://kubernetes.default.svc
     namespace: "default"

@@ -41,4 +41,16 @@ describe("String Manipulation API Integration Tests", () => {
         done();
       });
   });
+
+  it("should convert a string to lowercase via API", (done) => {
+    chai
+      .request(app)
+      .get("/api/lowercase")
+      .query({ text: "INTEGRATION" })
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.text).to.equal("integration");
+        done();
+      });
+  });
 });

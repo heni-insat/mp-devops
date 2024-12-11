@@ -22,3 +22,11 @@ exports.countVowels = (req, res) => {
   res.set("Content-Type", "text/plain");
   res.send(count.toString());
 };
+
+exports.lowercase = (req, res) => {
+  const { text } = req.query;
+  if (!text) return res.status(400).send("No text provided");
+  if (typeof text !== "string") return res.status(400).send("Invalid text");
+  res.set("Content-Type", "text/plain");
+  res.send(text.toLowerCase());
+};

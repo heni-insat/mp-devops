@@ -32,4 +32,13 @@ describe("String Manipulation Controller Unit Tests", () => {
     };
     countVowels(req, res);
   });
+
+  it("should convert a string to lowercase", () => {
+    const req = { query: { text: "HELLO" } };
+    const res = {
+      send: (output) => expect(output).to.equal("hello"),
+      set: () => {},
+    };
+    lowercase(req, res);
+  });
 });
