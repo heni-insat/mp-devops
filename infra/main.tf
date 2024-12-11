@@ -8,7 +8,6 @@ variable "git_repo_branch" {
   default = "main"
 }
 
-
 resource "helm_release" "argocd" {
   name = "argocd"
 
