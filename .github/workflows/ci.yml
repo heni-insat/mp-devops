@@ -5,6 +5,9 @@ on: [push, pull_request]
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: github.actor != 'github-actions[bot]'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -75,6 +78,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update image to ${{ secrets.DOCKER_USERNAME }}/mp-devops:${IMAGE_TAG}"
+            git commit -m "Update image to ${{ secrets.DOCKER_USERNAME }}/mp-devops:${IMAGE_TAG} [skip-ci]"
             git push origin HEAD:main
           fi
