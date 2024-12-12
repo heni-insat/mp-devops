@@ -65,7 +65,7 @@ jobs:
 
       - name: Update Kubernetes manifests with new image tag
         run: |
-          sed -i "s|\(image: \)${{ secrets.DOCKER_USERNAME }}/mp-devops:.*|\1${{ secrets.DOCKER_USERNAME }}/mp-devops:${IMAGE_TAG}|" manifests/deployment.yaml
+          sed -i "s|\(image: \)${{ secrets.DOCKER_USERNAME }}/mp-devops:.*|\1${{ secrets.DOCKER_USERNAME }}/mp-devops:${IMAGE_TAG}|" infra/manifests/deployment.yaml
 
       - name: Commit and push updated manifests
         run: |
