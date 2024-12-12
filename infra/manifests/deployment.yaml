@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: mp-devops-app
-          image: heniinsat/mp-devops:latest
+          image: heniinsat/mp-devops:7bb5568
           ports:
             - containerPort: 3000
